@@ -5,13 +5,15 @@ This application uses a server in confluence with the OpenWeatherMap API to fetc
 
 # Tech Stack
 
-The application uses is predominantly built on JavaScript. It utilizes the Node JavaScript Runtime Environment, the Express.js framework and MongoDB to communicate with the client and for server operations.
+The application is predominantly written in JavaScript. It utilizes the Node JavaScript Runtime Environment, the Express.js framework and MongoDB to communicate with the client and for server operations.
 
 # Developer Set Up
 
 The application comes with the package.json file.
 ```javascript 
 npm install
+
+npm start
 ```
 This is sufficient to download all production and development dependencies and to run the server.
 
