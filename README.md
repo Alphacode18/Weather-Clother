@@ -14,3 +14,6 @@ The application comes with the package.json file.
 npm install
 ```
 This is sufficient to download all production and development dependencies and to run the server.
+
+
+Note: README will be update continuously as the project is further developed.
