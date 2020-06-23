@@ -12,6 +12,8 @@ The application is predominantly written in JavaScript. It utilizes the Node Jav
 The application comes with the package.json file.
 ```javascript 
 npm install
+
+npm start
 ```
 This is sufficient to download all production and development dependencies and to run the server.
 
