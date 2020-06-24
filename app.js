@@ -9,6 +9,8 @@ const bodyParser = require('body-parser');
 //Custom Module Import Statements
 const homeRouter = require('./routes/home');
 const errorRouter = require('./routes/404');
+const registerRouter = require('./routes/register');
+const registeredRouter = require('./routes/registered');
 
 const app = express();
 
@@ -28,6 +30,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(homeRouter);
 app.use(errorRouter);
+app.use(registerRouter);
+app.use(registeredRouter);
 
 //Server created and started
 
