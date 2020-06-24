@@ -4,7 +4,6 @@ const path = require('path');
 
 //Third Party Package Import Statements
 const express = require('express');
-const bodyParser = require('body-parser');
 
 //Custom Module Import Statements
 const homeRouter = require('./routes/home');
@@ -22,9 +21,6 @@ app.use('/', (request, response, next) => {
 
 //Static Serving
 app.use(express.static(path.join(__dirname, 'public')));
-
-//Body Parser
-app.use(bodyParser.urlencoded({extended: true}));
 
 //Router Usage
 
