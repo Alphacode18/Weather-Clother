@@ -1,5 +1,5 @@
 # Weather-Clother
-A weather based clothes suggestion application.
+A weather based clothes suggestion engine.
 
 This application uses a server in confluence with the OpenWeatherMap API to fetch relevant local weather information and emails you the appropriate clothes to wear for the day automatically.
 
