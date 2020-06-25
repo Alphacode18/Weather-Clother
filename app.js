@@ -13,6 +13,9 @@ const registeredRouter = require('./routes/registered');
 
 const app = express();
 
+app.set('view engine', 'pug');
+app.set('views', path.join(__dirname, 'views'));
+
 //Middleware
 
 app.use('/', (request, response, next) => {
