@@ -9,7 +9,6 @@ const root = require('../util/path');
 router.use(bodyParser.urlencoded({extended: true}));
 
 router.get('/register', (request, response, next) => {
-   //response.sendFile(path.join(root, 'views', 'register.html')); 
    response.render('register');
 });
 

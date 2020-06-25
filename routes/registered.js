@@ -6,8 +6,7 @@ const router = express.Router();
 
 const root = require('../util/path');
 
-router.get('/registered', (request, response, next) => {
-   //response.sendFile(path.join(root, 'views', 'home.html')); 
+router.get('/registered', (request, response, next) => {ß
    response.send('<h1>User Registered</h1>');
 });
 
