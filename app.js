@@ -7,11 +7,13 @@ const express = require('express');
 
 //Custom Module Import Statements
 const homeRouter = require('./routes/home');
+const authorRouter = require('./routes/author')
 const errorRouter = require('./routes/404');
 const registerRouter = require('./routes/register');
 const registeredRouter = require('./routes/registered');
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
@@ -28,10 +30,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Router Usage
 
 app.use(homeRouter);
-app.use(errorRouter);
+app.use(authorRouter);
 app.use(registerRouter);
 app.use(registeredRouter);
+app.use(errorRouter);
 
 //Server created and started
 
-app.listen(3000);
+app.listen(port);
+console.log(`The Application Is Hosted On Port ${port}`);

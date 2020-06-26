@@ -6,8 +6,8 @@ const router = express.Router();
 
 const root = require('../util/path');
 
-router.get('/registered', (request, response, next) => {
-   response.render('registered');
+router.get('/author', (request, response, next) => {
+   response.render('author');
 });
 
 module.exports = router;
