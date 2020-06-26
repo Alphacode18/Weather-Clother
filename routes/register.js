@@ -1,4 +1,5 @@
 const path = require('path');
+const fs = require('fs');
 
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -13,7 +14,7 @@ router.get('/register', (request, response, next) => {
 });
 
 router.post('/register', (request, response, next) => {
-   console.log(request.body); 
+   fs.appendFileSync('database.txt', `${request.body.name}#${request.body.email}\n`);
    response.redirect('/registered'); 
  });
 
