@@ -9,7 +9,7 @@ const express = require('express');
 const homeRouter = require('./routes/home');
 const authorRouter = require('./routes/author')
 const errorRouter = require('./routes/404');
-const registerRouter = require('./routes/register');
+const registerData = require('./routes/register');
 const registeredRouter = require('./routes/registered');
 
 const app = express();
@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(homeRouter);
 app.use(authorRouter);
-app.use(registerRouter);
+app.use(registerData.router);
 app.use(registeredRouter);
 app.use(errorRouter);
 

@@ -7,15 +7,22 @@ const bodyParser = require('body-parser');
 const router = express.Router();
 
 const root = require('../util/path');
+
 router.use(bodyParser.urlencoded({extended: true}));
+
+const userData = [];
 
 router.get('/register', (request, response, next) => {
    response.render('register');
 });
 
 router.post('/register', (request, response, next) => {
-   fs.appendFileSync('database.txt', `${request.body.name}#${request.body.email}\n`);
-   response.redirect('/registered'); 
- });
+   userData.push(request.body);
+   const name = request.body.name;
+   const email = request.body.email;
+   fs.appendFileSync('database.txt', `${name}#${email}\n`);
+   response.redirect('/registered');
+ }); 
 
-module.exports = router;
+exports.router = router;
+exports.users = userData;
