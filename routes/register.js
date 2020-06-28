@@ -13,7 +13,9 @@ router.use(bodyParser.urlencoded({extended: true}));
 const userData = [];
 
 router.get('/register', (request, response, next) => {
-   response.render('register');
+   response.render('register', {
+      pageTitle: 'Register',
+   });
 });
 
 router.post('/register', (request, response, next) => {

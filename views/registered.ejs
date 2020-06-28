@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= pageTitle %></title>
+</head>
+<body>
+    <head>
+        <!-- Required meta tags-->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Bootstrap CSS-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+        <link rel="stylesheet" href="/css/jumbotrons.css" />
+        <title>Home Page</title>
+    </head>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/author">Author</a></li>
+                </ul>
+            </div>
+            <div class="mx-auto order-0"><a class="navbar-brand mx-auto" href="#">Weather Clother</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2"><span class="navbar-toggler-icon"></span></button></div>
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="/register">Sign Up</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main role="main">
+        <div class="jumbotron alignment">
+            <div class="container">
+                <h1 class="display-1 text quote">Thanks For Signing Up <%= name %>!</h1>
+                <p class="text quote">We will send you a confirmation email at <%=  email %> shortly, and your services will be started from tomorrow!</p>
+                <p class="center-button"><a class="btn btn-lg" href="/" role="button">Go Back &raquo;</a></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

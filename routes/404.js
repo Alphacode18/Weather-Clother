@@ -7,7 +7,9 @@ const router = express.Router();
 const root = require('../util/path');
 
 router.use((request, response, next) => {
-   response.render('404.pug'); 
+   response.render('404', {
+      pageTitle: 'Page Not Found',
+   }); 
 });
 
 module.exports = router;
