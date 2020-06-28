@@ -22,7 +22,10 @@ router.post('/register', (request, response, next) => {
    userData.push(request.body);
    const name = request.body.name;
    const email = request.body.email;
-   fs.appendFileSync('database.txt', `${name}#${email}\n`);
+   const country = request.body.country;
+   const state = request.body.state;
+   const city = request.body.city;
+   fs.appendFileSync('database.txt', `${name}#${email}#${country}#${state}#${city}\n`);
    response.redirect('/registered');
  }); 
 
