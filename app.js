@@ -15,7 +15,7 @@ const registeredRouter = require('./routes/registered');
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.set('view engine', 'pug');
+app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 //Middleware

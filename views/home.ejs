@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= pageTitle %></title>
+</head>
+<body>
+    <head>
+        <!-- Required meta tags-->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Bootstrap CSS-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+        <title>Home Page</title>
+    </head>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/author">Author</a></li>
+                </ul>
+            </div>
+            <div class="mx-auto order-0"><a class="navbar-brand mx-auto" href="#">Weather Clother</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2"><span class="navbar-toggler-icon"></span></button></div>
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="/register">Sign Up</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main role="main">
+        <!-- Main jumbotron for a primary marketing message or call to action-->
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-3">Welcome to Weather-Clother</h1>
+                <p>Weather-Clother is a weather-based clothes suggestion engine written in JavaScript</p>
+                <p><a class="btn btn-primary btn-lg" href="/register" role="button">Sign Up &raquo;</a></p>
+            </div>
+        </div>
+        <div class="container">
+            <!-- Example row of columns-->
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>How It Works</h2>
+                    <p>Weather-Clother retrieves your local weather information daily. Post that, it uses a recommendation engine that takes into account all of your local weather based parameter and emails you a list of suggested clothes for day in the morning.</p>
+                    <p>This reduces your need to make decisions regarding clothing for the day and automates that task giving you more time to do things that matter.</p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Technology Stack</h2>
+                    <p>Weather-Clother is primarily written in JavaScript. It is built using Node.js, utilizing Express.js a the back-end framework.</p>
+                    <p>Database at this point is done using File I/O. It will soon be migrated to MongoDB using Mongoose. Email functionality is added using Nodemailer as a third party package. Front-End is done using Vanilla HTML, CSS and with the help of Bootstrap
+                        4.</p>
+                </div>
+                <div class="col-md-4">
+                    <h2>OpenWeatherMap API</h2>
+                    <p>Weather-Clother works in tandem with the OpenWeather API. It is the main source of weather information.</p>
+                    <p><a class="btn btn-primary btn-lg" href="https://openweathermap.org/api" role="button">Learn More &raquo;</a></p>
+                </div>
+            </div>
+            <hr/>
+        </div>
+        <!-- /container-->
+    </main>
+    <footer class="footer mt-auto py-3">
+        <div class="container"><span class="text-muted">Built By Shreyas Kharbanda</span></div>
+    </footer>
+    <!-- Optional JavaScript-->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -9,6 +9,7 @@ const usersData = require('../routes/register');
 
 router.get('/registered', (request, response, next) => {
    response.render('registered', {
+      pageTitle: 'Registration Successful',
       name: usersData.users[usersData.users.length - 1].name,
       email: usersData.users[usersData.users.length - 1].email,
    });
