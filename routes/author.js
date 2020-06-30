@@ -1,15 +1,9 @@
-const path = require('path');
-
 const express = require('express');
 
 const router = express.Router();
 
-const root = require('../util/path');
+const authorController = require('../controllers/author');
 
-router.get('/author', (request, response, next) => {
-   response.render('author', {
-      pageTitle: 'Author',
-   });
-});
+router.get('/author', authorController.getAuthor);
 
 module.exports = router;

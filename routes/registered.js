@@ -1,18 +1,9 @@
-const path = require('path');
-
 const express = require('express');
 
 const router = express.Router();
 
-const root = require('../util/path');
-const usersData = require('../routes/register');
+const registeredController = require('../controllers/registered');
 
-router.get('/registered', (request, response, next) => {
-   response.render('registered', {
-      pageTitle: 'Registration Successful',
-      name: usersData.users[usersData.users.length - 1].name,
-      email: usersData.users[usersData.users.length - 1].email,
-   });
-});
+router.get('/registered', registeredController.getRegistered);
 
 module.exports = router;
