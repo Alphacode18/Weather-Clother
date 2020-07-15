@@ -15,6 +15,7 @@ const errorRouter = require('./routes/404');
 const registerData = require('./routes/register');
 const registeredRouter = require('./routes/registered');
 const sequelize = require('./util/database'); 
+const User = require('./models/user');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -38,6 +39,13 @@ app.use(authorRouter);
 app.use(registerData.router);
 app.use(registeredRouter);
 app.use(errorRouter);
+
+sequelize.sync()
+    .then(result => {
+    })
+    .catch(err => {
+        console.log(err);
+    });
 
 app.listen(port);
 console.log(`The Application Is Hosted On Port ${port}`);
