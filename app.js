@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 //Core Module Import Statements
 const path = require('path');
 
