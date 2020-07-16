@@ -16,6 +16,7 @@ const registerData = require('./routes/register');
 const registeredRouter = require('./routes/registered');
 const sequelize = require('./util/database'); 
 const User = require('./models/user');
+const getWeatherData = require('./util/weather-data');
 
 const app = express();
 const port = process.env.PORT || 3000;
