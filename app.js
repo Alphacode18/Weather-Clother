@@ -42,6 +42,7 @@ app.use(errorRouter);
 
 sequelize.sync()
     .then(result => {
+        console.log("Database Synced");
     })
     .catch(err => {
         console.log(err);
