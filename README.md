@@ -9,7 +9,7 @@ The application is predominantly written in JavaScript. It utilizes the Node Jav
 
 # User Guide
 
-The live webiste is hosted on weather--clother.herokuapp.com/
+The live webiste is currently down but it will eventually be hosted on weather--clother.herokuapp.com/
 
 # Developer Set Up
 
