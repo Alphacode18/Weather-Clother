@@ -6,7 +6,6 @@ const path = require('path');
 
 //Third Party Package Import Statements
 const express = require('express');
-const Sequelize = require('sequelize');
 
 //Custom Module Import Statements
 const homeRouter = require('./routes/home');
@@ -15,8 +14,8 @@ const errorRouter = require('./routes/404');
 const registerData = require('./routes/register');
 const registeredRouter = require('./routes/registered');
 const sequelize = require('./util/database'); 
-const User = require('./models/user');
 const getWeatherData = require('./util/weather-data');
+const parser = require('./util/parser');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -43,11 +42,9 @@ app.use(errorRouter);
 
 sequelize.sync()
     .then(result => {
-        console.log("Database Synced");
+        app.listen(port);
+        const weatherData = getWeatherData('mumbai', parser);
     })
     .catch(err => {
         console.log(err);
     });
-
-app.listen(port);
-console.log(`The Application Is Hosted On Port ${port}`);
